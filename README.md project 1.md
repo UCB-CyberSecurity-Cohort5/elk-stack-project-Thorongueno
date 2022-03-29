@@ -153,12 +153,13 @@ Host name in Host Configuration file
 http://20.185.243.66:5601
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+```
 ---
 - name: Installing and Launch Filebeat
   hosts: webservers
   become: yes
   tasks:
-    # Use command module
+# Use command module
   - name: Download filebeat .deb file
     command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
 
@@ -190,7 +191,8 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
       name: filebeat
       enabled: yes
 
-
+```
+```
 
     ## Use command module
   ---
@@ -231,3 +233,4 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
       enabled: yes
 
 
+```
