@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Diagrams/redteamdiagram.png)
+![TODO: Update the path with the name of your diagram](Diagrams/redteamdiagram.PNG)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Project 1 Red-Team Network Diagram file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -50,8 +50,8 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 |---------- |----------   |------------------|------------------|
 | Jump Box  | Gateway     | 10.0.0.4(Private)| Linux            |
 | ELK-SERVER|Load Balancer| 10.1.0.4(Private)| Linux            |
-| Web1      |Load Balancer| 10.0.0.5(Private)| Linux            |         | Web2      |Load Balancer| 10.0.0.6(Private)| Linux            |
-
+| Web1      |Load Balancer| 10.0.0.5(Private)| Linux            ||   Web2           |Load Balancer| 10.0.0.6(Private)| Linux         |   |
+| Web3      |Load Balence | 10.0.0.7(Private)| Linux            |
 
 ### Access Policies
 
@@ -105,7 +105,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](linux/dockerpscorrection.png)
+![TODO: Update the path with the name of your screenshot of docker ps output](linux/dockerpscorrection.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -192,7 +192,7 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
 
 
 
-    # Use command module
+    ## Use command module
   ---
 - name: Install metric beat
   hosts: webservers
