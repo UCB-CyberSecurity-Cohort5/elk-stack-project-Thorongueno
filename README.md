@@ -105,7 +105,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![ The docker ps output](linux/dockerpscorrection.png)
+![ The docker ps output](Linux/dockerpscorrection.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -156,6 +156,7 @@ Host name in Host Configuration file
 http://20.185.243.66:5601
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+```
 ---
 - name: Installing and Launch Filebeat
   hosts: webservers
@@ -233,4 +234,5 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
       name: metricbeat
       enabled: yes
 
+```
 
