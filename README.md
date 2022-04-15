@@ -87,7 +87,9 @@ All these VMs can only be accessed from the Jump-Box-Provisioner
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- What is the main advantage of automating configuration with Ansible?_
+- What is the main advantage of automating configuration with Ansible?
+
+
 The main advantage of automation Configuration with Ansible are as follows:
 Application Deployment.
 It can be customized.
