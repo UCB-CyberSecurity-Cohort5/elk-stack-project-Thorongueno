@@ -93,7 +93,9 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 The main advantage of automation Configuration with Ansible are as follows:
 
 Application Deployment.
+
 It can be customized.
+
 Configuration Management.
 
 The playbook implements the following tasks:
