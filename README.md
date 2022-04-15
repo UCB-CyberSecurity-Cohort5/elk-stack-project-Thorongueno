@@ -95,6 +95,7 @@ Configuration Management.
 
 The playbook implements the following tasks:
 -  In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+
 - SSH into JumpBox ( ssh RedAdmin@40.112.192.54)
 - Start/Attached to the ansible docker (sudo docker start pensive_bell)/(sudo docker attach pensive_bell)
 - /etc/ansible/files directory and created the ELK playbook (Elk_Playbook.yml)
