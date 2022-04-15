@@ -2,11 +2,11 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Diagrams/redteamdiagram.PNG)
+![This is My Diagram diagram](Diagrams/Diagram.drawio.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Project 1 Red-Team Network Diagram file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - _: This is the playbook file._
   Filebeat-playbook.yml
   Filebeat-configuration.yml
 
@@ -50,27 +50,24 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 |---------- |----------   |------------------|------------------|
 | Jump Box  | Gateway     | 10.0.0.4(Private)| Linux            |
 | ELK-SERVER|Load Balancer| 10.1.0.4(Private)| Linux            |
-| Web1      |Load Balancer| 10.0.0.5(Private)| Linux            ||   Web2           |Load Balancer| 10.0.0.6(Private)| Linux         |   |
-| Web3      |Load Balence | 10.0.0.7(Private)| Linux            |
+| Web1      |Load Balancer| 10.0.0.5(Private)| Linux            |         | Web2      |Load Balancer| 10.0.0.6(Private)| Linux            |
+
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
-
-192.168.6.1 (LocalHost IP Address)
+- _ My whitelisted IP addresses is
+192.168.6.1 
 
 
 Machines within the network can only be accessed by Jump-Box-Provisioner .
 -  Which machine did you allow to access your ELK VM?
- 
- Jump-Box-Provisioner
+  Jump-Box-Provisioner
   
 
  What was its IP address?
- 
  40.112.192.54
 
 
@@ -108,7 +105,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Linux/dockerpscorrection.PNG)
+![ The docker ps output](linux/dockerpscorrection.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -124,7 +121,7 @@ Metrics Beat
 
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- _  The data file beat collects system logs, events, document reach accessed and the metrics beat contain the collects are as follows:
  Machine health 
  Performance
  System logs
@@ -139,14 +136,17 @@ SSH into the control node and follow the steps below:
 - Update the filebeat.yml file to include the ELK private IP
 - Run the playbook, and navigate to http://20.185.243.66:5601/app/kibana#/home/ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
+_TAnswer the following questions to fill in the blanks:_
 - _Which file is the playbook? 
+
 Ansible-playbook files
 
 Where do you copy it?_
+
 /etc/ansible/files
 
 - _Which file do you update to make Ansible run the playbook on a specific machine? 
+
 /etc/ansible/hosts file (IP of the Virtual Machines).
 
 How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
@@ -156,13 +156,12 @@ Host name in Host Configuration file
 http://20.185.243.66:5601
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-```
 ---
 - name: Installing and Launch Filebeat
   hosts: webservers
   become: yes
   tasks:
-# Use command module
+    # Use command module
   - name: Download filebeat .deb file
     command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
 
@@ -194,10 +193,9 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
       name: filebeat
       enabled: yes
 
-```
-```
 
-    ## Use command module
+
+    # Use command module
   ---
 - name: Install metric beat
   hosts: webservers
@@ -236,4 +234,3 @@ _As a **Bonus**, provide the specific commands the user will need to run to down
       enabled: yes
 
 
-```
