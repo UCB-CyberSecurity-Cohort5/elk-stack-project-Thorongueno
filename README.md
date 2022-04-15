@@ -59,15 +59,18 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _TODO: Add whitelisted IP addresses_
+
 192.168.6.1 (LocalHost IP Address)
 
 
 Machines within the network can only be accessed by Jump-Box-Provisioner .
 -  Which machine did you allow to access your ELK VM?
-  Jump-Box-Provisioner
+ 
+ Jump-Box-Provisioner
   
 
  What was its IP address?
+ 
  40.112.192.54
 
 
